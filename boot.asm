@@ -9,12 +9,12 @@ start:
 msg	db	"Welcome to My Boot Loader!", 0
 
 print_str:
-	lodsb
-	or      al, al
-	jz      print_done
-	mov     ah,	0eh
-	int     10h
-	jmp     print_str
+    lodsb
+    or      al, al
+    jz      print_done
+    mov     ah,	0eh
+    int     10h
+    jmp     print_str
 print_done:
 	ret
 

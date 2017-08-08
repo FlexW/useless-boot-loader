@@ -12,8 +12,8 @@ print_str:
 	lodsb
 	or      al, al
 	jz      print_done
-	mov	    ah,	0eh
-	int	    10h
+	mov     ah,	0eh
+	int     10h
 	jmp     print_str
 print_done:
 	ret
@@ -32,11 +32,11 @@ get_char:
 
 loader:
     xor	    ax, ax
-	mov	    ds, ax
-	mov	    es, ax
+    mov	    ds, ax
+    mov	    es, ax
 
     call    clear_screen
-	mov	    si, msg
+    mov	    si, msg
     call    get_char
     call    print_str
 
